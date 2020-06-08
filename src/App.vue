@@ -1,32 +1,43 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+<v-app>
+    <NavBar></NavBar>
+
+  <!-- Sizes your content based upon application components -->
+  <v-content>
+    
+    
+    
+    <!-- Provides the application the proper gutter -->
+    <v-container fluid>
+      <!-- <v-row>
+        <v-col cols='3'>
+        <FiltruBar></FiltruBar>
+        </v-col>
+        <v-col cols='9'> sdasdfasdf -->
+
+        <router-view></router-view>
+        <!-- </v-col>
+      </v-row> -->
+    </v-container>
+  </v-content>
+
+  <v-footer app>
+    <!-- -->
+  </v-footer>
+</v-app>
 </template>
+<script>
+import NavBar from './components/NavBar';
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+export default {
+  name: 'App',
+  components: {
+    NavBar
+  },
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+  data: () => ({
+    
+   
+  }),
+};
+</script>
